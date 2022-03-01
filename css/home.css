@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:url(/img/home/background-home-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#img-logo{
+    margin-left: 40px;
+}
+#linha-menu{
+    width: 950px;
+    height: 1px;
+    background-color: white;
+    margin-left: 80px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    background-color: transparent;
+    border-bottom: 1px solid white;
+}
+#logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#header{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    position: relative;
+}
+#menu{
+    width: 500px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.20);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    gap: .5rem;
+}
+#menu a{
+    display: block;
+    padding: .5rem;
+}
+#btn-mobile{
+    display: none;
+}
+/*main*/
+main{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+}
+#box-texto{
+    width: 60%;
+    height: 400px;
+    margin: 5rem 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    margin-left: 100px;
+}
+.texto-01{
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.texto-02{
+    color: white;
+    font-size: 5rem;
+    font-weight: 500;
+    margin: 2rem 0px;
+}
+.texto-03{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+#box-btn{
+    width: 80%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btn{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#btn:hover{
+    cursor: pointer;
+    box-shadow: 20px 20px 100px white;
+}
+
+/*versão tablet*/
+
+    @media (max-width:1000px) and (min-width:601px){
+        body{
+            background-image:url(/img/home/background-home-tablet.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #linha-menu{
+            width: 0px;
+            height: 0px;
+            background-color: white;
+        }
+        a{
+            color: white;
+        }
+        a:hover{
+            border-bottom: 2px solid white;
+        }
+        #img-logo{
+            margin-left: 30px;
+        }
+        #header{
+            width: 100%;
+            height: 70px;
+        }
+        #menu{
+            background-color: rgba(255, 255, 255, 0.411);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+        /*main*/
+        main{
+            width: 100%;
+            height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #box-texto{
+            width: 80%;
+            height: 400px;
+            margin: 5rem 0px;
+            text-align: center;
+            padding: 1rem;
+        }
+        .texto-01{
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        .texto-02{
+            color: white;
+            font-size: 3rem;
+            font-weight: 500;
+            margin: 2rem 0px;
+        }
+        .texto-03{
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        #box-btn{
+            width: 80%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #btn{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+}
+
+/*versão mobile*/
+
+@media (max-width:600px) {
+    body{
+        background-image: url(/img/home/background-home-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #linha-menu{
+        width: 0px;
+        height: 0px;
+        background-color: white;
+    }
+    #header{
+        width: 100%;
+        height: 70px;
+    }
+    #menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background-color: rgba(255, 255, 255, 0.20);
+        height: 0px;
+        transition: .5s;
+        z-index: 100000px;
+        text-align: center;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active #menu{
+        height: calc(45vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: white;
+    }
+    #menu a:hover{
+        border-bottom: 1px solid black;
+        background-color: #cccc;
+    }
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        color: transparent;
+    }
+    #hamburger{
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+        color: white;
+    }
+    #hamburger::after, #hamburger::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: currentColor;
+        margin-top: 5px;
+        transition: 0.5s;
+        position: relative;
+    }
+    #nav.active #hamburger{
+        border-top: transparent;
+    }
+    #nav.active #hamburger::before{
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+    /*main*/
+    main{
+        width: 100%;
+        height: 700px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #box-texto{
+        width: 100%;
+        height: 300px;
+        margin: 5rem 0px;
+        text-align: center;
+        padding: 1rem;
+    }
+    .texto-01{
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .texto-02{
+        color: white;
+        font-size: 3rem;
+        font-weight: 500;
+        margin: 2rem 0px;
+    }
+    .texto-03{
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    #box-btn{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #btn{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+}
